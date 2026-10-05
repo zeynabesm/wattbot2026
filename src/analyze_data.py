@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv("data/train_QA.csv")
+print(f"total numbers of educational questions:{len(df)}")
+print("_" * 40)
+print("type of questions:")
+print(f"directly:{df['Quote'].sum()}")
+print(f"table: {df['Table'].sum()}")
+print(f"figure:{df['Figure'].sum()}")
+print(f"Math:{df['Math'].sum()}")
+print(f"no response:is_na:{df['is_NA'].sum()}")
